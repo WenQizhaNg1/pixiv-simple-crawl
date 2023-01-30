@@ -43,7 +43,7 @@ params1 = {
 # 取图片的query
 params2 = {
     'lang': 'zh',
-    'version': 'c21c3e4b1b88511ca5abf2129cec4c5f244af4bc'
+    'version': ''
 }
 
 if __name__ == '__main__':
@@ -79,7 +79,7 @@ if __name__ == '__main__':
     if len(pid_dict) != 0:
         for rank, i in pid_dict.items():
             # 随机睡眠时间防止被封
-            time.sleep(random.randint(2, 4))
+            time.sleep(random.randint(5, 10))
             num = 1
             url = 'https://www.pixiv.net/ajax/illust/' + i + '/pages'
             r = s.get(url=url, headers=headers, params=params2, proxies=proxies)
