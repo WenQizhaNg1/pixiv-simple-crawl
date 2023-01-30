@@ -5,7 +5,6 @@ import time
 
 import cloudscraper
 from fake_useragent import UserAgent
-from lxml import etree
 
 headers = {
     'authority': 'www.pixiv.net',
@@ -61,7 +60,7 @@ if __name__ == '__main__':
     res = s.get('https://www.pixiv.net/ranking.php', headers=headers, params=params1, proxies=proxies)
     for content in res.json()['contents']:
         pid_dict[str(content['rank'])] = str(content['illust_id'])
-    res2 = s.get('https://www.pixiv.net/ranking.php', headers=headers, params={
+    res2 = s.get('https://www.pixiv.net/ranking.php',proxies=proxies, headers=headers, params={
         'mode': 'daily_r18',
         'p': '2',
         'format': 'json'
