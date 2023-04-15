@@ -182,7 +182,7 @@ def write_to_mysql(conn: pymysql, daily_list: list) -> None:
 
 if __name__ == '__main__':
     # 由键盘输入cookie
-    cookie = "first_visit_datetime_pc=2023-01-29+19:02:51; p_ab_id=3; p_ab_id_2=8; p_ab_d_id=962067425; yuid_b=JZRTIXQ; privacy_policy_notification=0; a_type=0; b_type=1; login_ever=yes; pt_60er4xix=uid=ow5LrhgGyJxFQ7HOMH8sTg&nid=1&vid=AqF0YnbxxJb9HCM3e3kElQ&vn=1&pvn=1&sact=1675010151730&to_flag=0&pl=X5HI-3shhhNWgXmBfR1aMQ*pt*1675008864517; first_visit_datetime=2023-01-30+02:41:00; privacy_policy_agreement=5; device_token=0664d4fd900dd63baccb336478a6c33e; c_type=25; QSI_S_ZN_5hF4My7Ad6VNNAi=v:0:0; webp_available=1; PHPSESSID=34452338_jGgNQguo5Zi53Ohyd1CkO7BLFxy6UGHy; tag_view_ranking=0xsDLqCEW6~RTJMXD26Ak~KN7uxuR89w~PHsucBd84t~mZj99dTY1x~jH0uD88V6F~HbfqxxCMSP~7qtAnPrz1r~Gc2jc2ni0g~5oPIfUbtd6~4QveACRzn3~wlFTylDV0b~TcgCqYbydo~leIwAgTj8E~1SQy4SHbjC~k_6Tbz5i0P~faHcYIP1U0~3gc3uGrU1V~_EOd7bsGyl~Lt-oEicbBr~5U2rd7nRim~BSlt10mdnm~ZxAyxs0UWi~FO5UFnietZ~TjzQohypbT~nQRrj5c6w_~mFuvKdN_Mu~PvCsalAgmW~yCCrC4yzT3~6GYRfMzuPl~_vCZ2RLsY2~IpBVNx19zX~WjRN9ve4kb~_zgYWz7CbE~dbWQByG3DG~pinM0-ubtH~48UjH62K37~jpIZPQ502H~yREQ8PVGHN~AGF29gcJU3~bfM8xJ-4gy~_3oeEue7S7~lvb9wvOmP1~m2xpOASczc~gTlYXi_7gu~yPNaP3JSNF~y9_NhLUb-E~kGYw4gQ11Z~4ZEPYJhfGu~9V46Zz_N_N~rOnsP2Q5UN~jk9IzfjZ6n~FHZwS-O-_-~TbuodNZ_0Z~Ca0ugDlrQN~HY55MqmzzQ~wKl4cqK7Gl; __cf_bm=gI7ORvkDbR_lQTxKDSKKre2qf9CufKtIgKYSqN51ZZg-1681554953-0-AUs1G1U11n2vDUnQDYGa6pNMlikAq4VfvmzYtyDs7xOqjI88ZgOtxrqUXGXnf+b81ikaOeWsut7FNpyaGTuUW08UDNNvKPKyPrBDXpIXMKl7"
+    cookie = ""
     cookies = {c.split('=')[0]: c.split('=')[1] for c in cookie.split('; ')}
     s = cloudscraper.create_scraper(browser={
         'browser': 'chrome',
