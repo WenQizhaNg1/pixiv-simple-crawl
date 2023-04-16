@@ -10,3 +10,4 @@
 ## TODO LIST
 
 - [ ] 自动化获取用户cookie
+- [ ] 接入Server酱推送
